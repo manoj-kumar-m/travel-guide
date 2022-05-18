@@ -3,35 +3,85 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 .gallery{
-    padding: 100px 0;
-    background:#efefef;
+    padding: 100px 50px 120px 50px;
+    background:#dcdcdc;
     
+}
+.galleryHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    padding: 0px 120px ;
+}
+.galleryHeader h1{
+    text-align: center;
+    
+}
+.galleryHeader a{
+    transition: .3s;
+    text-align: right;
+    margin: 20px 0;
+}
+.galleryHeader a:hover{
+color: red;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
+.col{ 
+    margin:20px 10px;
+    width:280px;
+    height: 160px;
+    /* background: rgb(0,0,0); */
+    border-radius: 10px;
+
+}
+
+
 .galleryBox img{
     width: 100%;
+    height: 180px !important;
     border-radius: 10px;
     cursor: pointer;
-    transition:1s;      
+    transition:.6s; 
+    position: absolute;
+    background: rgb(0,0,0);
 }
 .galleryBox img:hover{
     transform: scale(1.1);
+
+    filter:blur(1.2px) ;
+    
 }
 .galleryBox  h4{
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 4px 6px black;
+    stroke-width: 10px;
     display: block;
     font-size: 20px;
     font-weight: 600;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left:150px;
+    top: 90px;
+    text-emphasis: 20px;
     transform: translate(-50%,-50%);
 }
 .galleryBox{
     position: relative;
-    margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px 2px rgba(37,73,214,0.5);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+}
+
+.galleryBox:hover{
+    background-color: black;
 }

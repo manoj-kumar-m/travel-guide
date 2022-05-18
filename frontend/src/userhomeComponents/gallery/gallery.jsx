@@ -1,39 +1,42 @@
 import React from 'react'
-
+import classes from './gallery.module.css'
 const Gallery = () => {
   return (
       
-        <section className={classes.gallery}>
+      <div className={classes.gallery}>
+          <div className={classes.galleryHeader}>
             <h1>Travelling Gallery</h1>
+            <a href="/">see all {`>`} </a>
+          </div>
             <div className={classes.container}>
                 <div className={classes.row}>
                     <div className={classes.col}>
                         <div className={classes.galleryBox}>
-                            <img src="./images/travel-1.jpg" alt="" />
+                            <img src="https://picsum.photos/3840" alt="" />
                             <h4>Los Angeles</h4>
                         </div>
                     </div>
                     <div className={classes.col}>
                         <div className={classes.galleryBox}>
-                            <img src="./images/travel-2.jpg" alt="" />
+                            <img src="https://picsum.photos/3860" alt="" />
                             <h4>Los Angeles</h4>
                         </div>
                     </div>
                     <div className={classes.col}>
                         <div className={classes.galleryBox}>
-                            <img src="./images/travel-3.jpg" alt="" />
+                            <img src="https://picsum.photos/3880" alt="" />
                             <h4>Los Angeles</h4>
                         </div>
                     </div>
-                    <div className={classes.col-md-3}>
+                    <div className={classes.col}>
                         <div className={classes.galleryBox}>
-                            <img src="./images/travel-4.jpg" alt="" />
+                            <img src="https://picsum.photos/3820" alt="" />
                             <h4>Los Angeles</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
   )
 }
 

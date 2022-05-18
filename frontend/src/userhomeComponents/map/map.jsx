@@ -24,7 +24,7 @@ const Map = () => {
           mapboxAccessToken={'pk.eyJ1IjoibWFub2owNjAzMDEiLCJhIjoiY2wzYmF3azVuMDBwdTNpcGpuMnVreGk1MCJ9.m5mxDyxgbzmnOxtQ1gIaBw'}
           style={{
             height: '100vh',
-            width: '100vw'
+            width: '100%'
           }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
         onViewportChange={viewport => {
