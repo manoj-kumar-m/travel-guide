@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+.menuAnchor{
+    text-decoration: none;
+    color:azure ;
+}
+.menuAnchor:hover{
+    color:red ;
+
+}
+footer{
+    height: 100vh;
+    background-color: rgb(24,27,41);
+    max-width: 1600px;
+}
+.footerContainer{
+    background-color: rgb(24,27,41);
+    height: max-content;
+    width: 100%;
+    color: azure;
+    padding-top: 50px;
+}
+.footerRow1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 20px;
+    margin: 20px 0 ;
+}
+.footerLogo {
+    cursor: pointer;
+    margin-left: 50px;
+    
+    
+}
+.footerLogo img{
+    border-radius: 200px;
+    margin: 20px 0;
+   
+}
+.footerHeading{
+    text-align: center;
+    padding: 8px 0;
+    
+}
+.footerSearchInput{
+    border: 0;
+    padding: 8px;
+    padding-left: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 500px ;
+    height: 50px;
+    border-radius: 50px;
+}
+.footerForm{
+    position: relative;
+    
+}
+.footerSearchSubmit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 30px;
+    margin: 3px;
+    background: #e96b56;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+    
+}
+.footerSearchSubmit:hover{
+     background: #e6573f;
+     cursor: pointer;
+}
+
+
+.footerRow2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.footerLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.footerMenu{
+    flex: 2;
+    text-align: center;
+    
+}
+.footerMenu h3{
+    text-align: center;
+    padding: 20px;
+}
+.footerUnstyled{
+    padding: 5px;
+   
+}
+.footerUnstyled li{
+    margin-bottom: 15px;
+}
+.box1{
+    flex: 1;
+    margin: 0 40px;
+    margin-top: 40px;
+
+}
+/*------------------------- Social Media Icons ------------------- */
+.footerSocial{
+    flex: 1;
+    padding: 0 50px;
+    margin: 50px 20px 0 20px;
+    
+    
+} 
+.footerSocial h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.footerSocial p{
+    text-align: justify;
+    font-size: 14px;
+    
+}
+
+.footerSocialIcon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 60px ;
+    
+}
+
+.footerSocialIconAnchor {
+    color:white;
+    border:2px solid white;
+    padding: 12px 16px;
+    border-radius: 32px;
+    transition: .4s linear;
+}
+
+.footerSocialIconAnchor:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ------------------ Copy Right ---------------------- */
+
+.footerCopy{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footerCopy a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+
+@media screen and (max-width:960px) {
+    .footerRow1{
+        flex-direction: column;
+    }
+   
+    .footerLogo img{
+        position: relative;
+        right: 25px;
+    }
+    .footerSocial{
+        padding: 0 30px;
+    }
+    .footerSearchInput{
+        width: 400px ;
+        height: 40px;
+        font-size: 16px;
+    }
+    .footerSearchSubmit{
+        font-size: 14px;
+        padding: 0 30px;
+        
+    }
+    
+    
+}
+@media screen and (max-width:470px){
+    .footerSearchInput{
+        width: 240px ;
+        height: 30px;
+        font-size: 14px;
+    }
+    .footerSearchSubmit{
+        font-size: 12px;
+        padding: 0 10px;
+        
+    }
+    .footerSocialIcon{
+        padding-right:0 ;
+        padding-left: 0;
+    }
+    .footerSocialIconAnchor {
+      
+        padding: 4px 8px;
+        border-radius: 24px;
+        
+    }
+}
+
+@media screen and (max-width:330px) {
+    .footerContainer{
+        min-width: 200px;
+    }
+    .footerLinks{
+        flex-direction: column;
+    }
+    .footerSearchInput{
+        width: 180px ;
+        height: 25px;
+        font-size: 12px;
+    }
+    .footerSearchSubmit{
+        font-size: 10px;
+        padding: 0 10px;
+        
+    }
+    .footerSocial p{
+        font-size: 12px;
+        
+    }
+    .footerSocialIconAnchor {
+      
+        padding: 2px 4px;
+        border-radius: 24px;
+        
+    }
+}

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://picsum.photos/3840);
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+
+} 
+.container{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    padding: 10px 0;
+    top: 0;
+    z-index: 1;
+}
+.container img{
+    width: 150px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.loginBtn{
+    width: 100px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    margin: 0px 40px 0 0; 
+    transition: .3s;
+    letter-spacing: .5px;
+    cursor: pointer;
+   
+}
+.loginBtn:hover{
+    color: black;
+    background: white;
+    border: 2px solid rgb(135, 135, 135);
+}
+.header h1{
+    padding-top: 230px;
+    padding-bottom: 0;
+    font-size: 55px;
+}
+.header p{
+    margin: 18px 0;
+}
+.inputGroup{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 30px;
+    margin: auto;
+    padding: 3px;
+ 
+}
+.formControl{
+    width: 100%;
+    border: 0 !important;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none ;
+    
+    padding-left: 20px;
+    font-size: 16px;
+}
+.formControl:focus{
+    outline: none;
+}
+
+.inputGroupText{
+    width: 100%;
+    border: 0 ;
+    color: white;
+    border-radius: 30px ;
+    padding: 12px 25px ;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;  
+    transition: 0.3s;
+    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background-size: 600%;
+    animation: anime 16s linear infinite;
+}
+
+.inputGroupText:hover{
+    background: linear-gradient(45deg, #c2741b, #d61c54, #1e7dfa, #1cba95);
+    animation: anime 16s linear infinite;
+    background-size: 600%;
+
+  
+}
+
+
+
+
+
+@keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  

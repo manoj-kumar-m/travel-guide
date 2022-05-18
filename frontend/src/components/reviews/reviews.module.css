@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.reviewContainer{
+    max-width: 1600px;
+    padding: 40px;
+    margin-top: 20px;
+    
+    
+}
+
+.reviewHeadRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 30px;
+}
+/* .reviewHeading{
+    margin-left: 300px;
+   
+} */
+.reviewHeadRight{
+    display: flex;
+}
+.reviewHeadRight h4{
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.reviewDaysSelection{
+    padding: 5px;
+    width: 160px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.reviewDaysSelection option{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reviewBodyRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:  20px 0;
+}
+
+.reviewBodyCol{
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12);
+    margin: 20px 20px;
+    max-width: 320px;
+}
+.reviewBodyCol:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+.reviewUpDiv{
+    position: relative;
+}
+.reviewImg{
+    object-fit:cover;
+    width: 320px;
+    height: 200px;
+}
+.reviewTag{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: yellow;
+    padding: 6px;
+    font-weight: 700;
+}
+.reviewDownDiv{
+    padding: 10px 20px ;
+}
+.reviewDownHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewLocation{
+    font-size: 18px;
+}
+.reviewBodyDesc{
+    word-wrap: break-word;
+}
+
+.reviewRating{
+    display: flex;
+    align-items: baseline;
+    padding: 10px 0;
+    align-items: center;
+}
+.reviewRatingStars{
+    font-size: 20px;
+    margin-right: 10px;
+    color: rgb(211, 211, 33);
+    
+}
+/* .reviewRatingEachStar{
+    
+} */
+.reviewRatingCount{
+    margin-bottom: 5px;
+}
+
+.reviewPeriodPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewPeriodLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewPeriodLeft span{
+    margin-right: 5px;
+}
+.reviewPeriodLeft p{
+    margin-bottom: 5px;
+}
+.reviewPriceRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewPriceRight p{
+    margin-bottom: 5px;
+}
+
+
+
+
+
+@media screen and (max-width:960px) {
+    .reviewHeadRow{
+        flex-direction: column;
+    }
+    .reviewHeading{
+        font-size: 24px;
+        margin: 15px 0;
+    }
+    .reviewHeadRight h4{
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .reviewDaysSelection{
+        padding: 2px;
+        width: 100px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:560px) {
+ 
+    .reviewHeading{
+        font-size: 20px;
+        text-align: center;
+    }
+    .reviewHeadRight{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:360px) {
+  
+    .reviewHeading{
+        font-size: 20px;
+        text-align: center;
+    }
+    .reviewHeadRight{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .reviewImg{
+        width: 100%;
+        height: 100%;
+    }
+    .reviewBodyCol{
+        min-width: 200px;
+        margin-left: 20px;
+    }
+    .reviewRatingStars{
+        font-size: 8px;
+    }
+    .reviewRatingCount{
+        font-size: 8px;
+    }
+    .reviewTag{
+        padding: 1px;
+        font-weight: 600;
+    }
+   
+
+    .reviewLocation{
+        font-size: 14px;
+    }
+    .reviewBodyDesc{
+        word-wrap: break-word;
+        font-size: 10px;
+    }
+    
+
+    .reviewPeriodLeft span{
+        margin-right: 5px;
+    }
+    .reviewPeriodLeft p{
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .reviewPriceRight p{
+        margin-bottom: 5px;
+        font-size: 8px;
+
+    }
+}

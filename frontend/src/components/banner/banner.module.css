@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    height: 68vh;
+    background-image: url(https://picsum.photos/3840);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 10%;
+}
+.bannerHighlights{
+    padding: 80px 0;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;   
+    margin: auto;
+}
+.bookingBtn{
+    width: 120px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.bookingBtn:hover{
+    background: white;
+    color: black;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
