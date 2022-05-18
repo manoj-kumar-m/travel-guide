@@ -5,8 +5,8 @@ const Priceplan = () => {
       <>
         <div className={classes.container}>
               <h2>Choose your plan</h2>
-        <div className={classes.price-row}>
-            <div className={classes.price-col}>
+        <div className={classes.priceRow}>
+            <div className={classes.priceCol}>
                 <p>Starter</p>
                 <h3>19$ <span>/ month</span></h3>
                 <ul>
@@ -19,7 +19,7 @@ const Priceplan = () => {
                 </ul>
                 <button>Add To Cart</button>
             </div>
-            <div className={classes.price-col}>
+            <div className={classes.priceCol}>
                 <p>Advanced</p>
                 <h3>19$ <span>/ month</span></h3>
                 <ul>
@@ -32,7 +32,7 @@ const Priceplan = () => {
                 </ul>
                 <button>Add To Cart</button>
             </div>
-            <div className={classes.price-col}>
+            <div className={classes.priceCol}>
                 <p>Premium</p>
                 <h3>19$ <span>/ month</span></h3>
                 <ul>
