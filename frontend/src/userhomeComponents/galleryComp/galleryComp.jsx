@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './gallery.module.css'
+import classes from './galleryComp.module.css'
 const Gallery = () => {
   return (
       

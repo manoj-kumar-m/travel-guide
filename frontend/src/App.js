@@ -4,7 +4,8 @@ import './App.css';
 import Loader from './pages/loading/loader';
 import React from 'react'
 import  {useState, useEffect} from 'react'
-import Userhome from './userhome/userhome';
+import Userhome from './pages/userhome/userhome';
+
 
 const App = () => {
   const [loading, setLoading] = useState(false)
