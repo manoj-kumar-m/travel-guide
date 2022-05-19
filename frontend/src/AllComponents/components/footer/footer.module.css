@@ -60,6 +60,9 @@ footer{
     height: 50px;
     border-radius: 50px;
 }
+.footerSearchInput:focus{
+    outline: none;
+}
 .footerForm{
     position: relative;
     

@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className={classes.footerRow1}>
                     
                     <div className={classes.footerLogo}>
-                        <img src="https://picsum.photos/150" alt="" /> 
+                        <img src="./assets/triptok.png" alt="" /> 
                         
                     </div>
                     <div className={classes.footerSearch}>
