@@ -46,6 +46,10 @@ const Priceplan = () => {
                 </ul>
                 <button>Add To Cart</button>
             </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 493163e44390f60eb8e2e7047489ab85f2f8246a
         </div>
         </div>
        
