@@ -5,6 +5,12 @@ import Loader from './pages/loading/loader';
 import React from 'react'
 import  {useState, useEffect} from 'react'
 import Userhome from './pages/userhome/userhome';
+// import Choose from './AllComponents/featuredComponents/choose/choose';
+
+// import Map from './AllComponents/featuredComponents/map/map';
+import Features from './pages/featured/featured';
+// import Userhome from './pages/userhome/userhome';
+// import Priceplan from './pages/priceplan/priceplan';
 
 
 const App = () => {
@@ -13,7 +19,7 @@ const App = () => {
       setLoading(true)
       setTimeout( () => {
         setLoading(false)
-      },3000)
+      },1000)
   },[])
   
   return (
@@ -21,8 +27,8 @@ const App = () => {
       <>
       {/* {loading ? <Loader /> : <Home />} */}
      
-      {loading ?<Loader/>:<Userhome/> }
-</>        
+      {loading ?<Loader/> : <> <Userhome/> </>}
+    </>        
    
 
   )
