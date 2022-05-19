@@ -19,4 +19,8 @@ export const MenuList = [
     title: "Gallery",
     url: "/gallery",
   },
+  {
+    title: "Sign Out",
+    url: "/home",
+  },
 ];

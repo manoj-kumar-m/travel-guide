@@ -145,7 +145,7 @@ const Choose = () => {
                             <div className={classes.col3}>
                                 <label className={classes.formLabel}>Number of Days : </label>
                                 <select className={classes.formSelectDays} name="city">
-                                    <option value="">--Select City--</option>
+                                    <option value="">-- Select Days --</option>
                                     {
                                         data.days.map(days => (
                                             <option key={days.id} value={days.number}>{days.number} days</option>

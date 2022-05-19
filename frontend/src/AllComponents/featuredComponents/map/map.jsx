@@ -40,7 +40,7 @@ const Map = () => {
 
       <div className={classes.mapContainer}>
          <div className={classes.mapnavbar}>
-            <img src="https://picsum.photos/50" alt="" />
+            {/* <img src="https://picsum.photos/50" alt="" /> */}
         </div>
         <MapGL
           {...viewport}
