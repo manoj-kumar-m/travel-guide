@@ -30,7 +30,7 @@ const Choose = () => {
      const handlestate=(event)=>{
         const getstateid= event.target.value;
          setStateid(getstateid);
-         console.log(getstateid)
+         
     }
 
     const handledistrict=(event)=>{

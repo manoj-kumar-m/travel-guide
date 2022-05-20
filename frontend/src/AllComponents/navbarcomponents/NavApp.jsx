@@ -8,11 +8,11 @@ import Pricing from "../../pages/priceplan/priceplan";
 import Tours from '../../pages/tours/tours';
 import Home from '../../pages/home/home';
 
-import "./NavApp.css";
+import classes from "./NavApp.module.css";
 
 function NavApp() {
   return (
-    <div className="container">
+    <div className={classes.container}>
       <Router>
 
         {/* <Navbar /> */}
