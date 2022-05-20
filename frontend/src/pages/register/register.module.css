@@ -23,7 +23,7 @@
   .formContainer{
     width: 450px;
     margin: 0 auto;
-    
+    padding-bottom: 50px;
   }
   .formBody{
     background-color: #2c162f;
