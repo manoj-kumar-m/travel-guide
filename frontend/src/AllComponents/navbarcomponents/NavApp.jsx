@@ -14,7 +14,8 @@ function NavApp() {
   return (
     <div className="container">
       <Router>
-        <Navbar />
+
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/"  element={<UserHome />} />
           <Route path="/featured"  element={<Featured/>} />

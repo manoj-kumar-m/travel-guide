@@ -3,7 +3,8 @@ import './App.css';
 // import Home from './pages/home/home';
 import Loader from './pages/loading/loader';
 import React from 'react'
-import  {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import Register from './pages/register/register';
 // import Userhome from './pages/userhome/userhome';
 // import Choose from './AllComponents/featuredComponents/choose/choose';
 
@@ -11,7 +12,9 @@ import  {useState, useEffect} from 'react'
 // import Features from './pages/featured/featured';
 // import Userhome from './pages/userhome/userhome';
 // import Priceplan from './pages/priceplan/priceplan';
-import NavApp from './AllComponents/navbarcomponents/NavApp'
+// import NavApp from './AllComponents/navbarcomponents/NavApp'
+// import Login from './pages/login/login';
+
 
 const App = () => {
   const [loading, setLoading] = useState(false)
@@ -27,7 +30,7 @@ const App = () => {
       <>
       {/* {loading ? <Loader /> : <Home />} */}
      
-      {loading ?<Loader/> : <> <NavApp/> </>}
+      {loading ?<Loader/> : <> <Register/> </>}
     </>        
    
 

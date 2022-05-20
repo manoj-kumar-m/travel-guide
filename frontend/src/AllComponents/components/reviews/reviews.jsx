@@ -21,7 +21,7 @@ const Reviews = () => {
             <option value="Choose" disabled selected>choose</option>
             <option value="day">days</option>
             <option value="week">weeks</option>
-            <option value="month">months</option>
+            {/* <option value="month">months</option> */}
           </select>
         </div>
 
