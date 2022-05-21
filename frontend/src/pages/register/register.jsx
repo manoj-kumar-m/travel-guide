@@ -1,8 +1,11 @@
 import React,{useState} from 'react'
 import classes from './register.module.css'
 import axios from 'axios'
+import { NavLink, useNavigate } from 'react-router-dom';
 
-const Register = () => {
+const Register = ({setreguser}) => {
+
+const navigate = useNavigate()
 
 //---------------------show password---------------------------
 
@@ -73,15 +76,20 @@ const Register = () => {
       {
         password === confirmPassword &&
         axios.post('http://localhost:8000/app/register', registered)
-        .then(res => console.log(res.data))
+          .then(res => {
+            alert(res.data.message)
+            setreguser(res.data.user)
+            navigate("/login")
+          })
       }
 
           setemail=''
           setusername= ''
           setphoneno=''
           setpassword='' 
-          setconfirmPassword= ''
-      
+          setconfirmPassword = ''
+
+        // navigate("/login")
     }
   
 
@@ -171,7 +179,7 @@ const Register = () => {
                     <h2 className={classes.title}>Register </h2>
 
 
-                  <form  className={classes.form} autoComplete="off" onSubmit={(e) => handleSubmit(e)} method='post' action=''>
+                  <form  className={classes.form} autoComplete="off" onSubmit={(e) => handleSubmit(e)} method='post' >
  
                         <label for="email">Email</label>
                         <input type="email" value={input.email} name="email" id="email" placeholder="Email" onChange={(e) => handleemail(e)} onBlur={validateInput} />
@@ -199,15 +207,14 @@ const Register = () => {
                           <span>Show Password</span>
                       </div>
 
-                        <input type="submit" value="register" />
+                      <input className={classes.register} type="submit" value="register" />
                     </form>
                         <div className={classes.formFooter}>
-                            <span>Already have an account?</span> <a href="../login/login.jsx">Log In</a> 
+                            <span>Already have an account?</span> <NavLink exact to='/login' >  Log In</NavLink> 
                         </div>    
 
                 </div>
                             
-
             </div>
         </div>
         </div>

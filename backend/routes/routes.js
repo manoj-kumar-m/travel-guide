@@ -37,7 +37,7 @@ router.post('/register', async (req, res) => {
                     res.send(err)
                 } else {
                     res.send({
-                        message: "Successfully Registered"
+                        message: "Successfully Registered",user:user
                     })
                 }
             })
@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
                 if (result) {
 
                     res.send({
-                        message: "Login Successful"
+                        message: "Login Successful",user:user
                     })
                 } else {
                     res.send({

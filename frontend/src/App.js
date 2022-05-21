@@ -19,6 +19,10 @@ import Priceplan from './pages/priceplan/priceplan';
 
 
 const App = () => {
+
+  const [user, setuser] = useState({})
+  const [reguser, setreguser] = useState({})
+
   const [loading, setLoading] = useState(false)
   
   useEffect(()=>{
@@ -36,9 +40,13 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={loading ? <Loader /> :<Home />} />
-          <Route exact path="/login" element= {<Login />} />
-          <Route exact path="/register" element= {<Register />} />
-          <Route exact path="/home" element= {<Userhome />} />
+          <Route exact path="/home" element={
+            
+            (user && user._id) ?    <Userhome /> : <Login/>
+            
+          } />
+          <Route exact path="/register" element= {<Register setreguser={ setreguser}/>} />
+          <Route exact path="/login" element={<Login setuser={ setuser} />} />
           <Route path="/features"  element={<Features/>} />
           <Route path="/gallery" element={<Gallery/>} />
           <Route path="/pricing" element={<Priceplan/>} />
@@ -46,7 +54,7 @@ const App = () => {
           
         </Routes>
       </Router>
-
+          console.log(user , user._id)
 
     </>        
    

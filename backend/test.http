@@ -1,21 +1,21 @@
-# POST http://localhost:8000/app/register
-# Content-Type: application/json
-
-# {
-#     "email":"manoj060301gmail.com",
-#     "username":"manoj060301",
-#     "phoneno":"8431189610",
-#     "password":"manoj@123",
-#     "confirmPassword":"manoj@123"
-
-# } 
-
-POST http://localhost:8000/app/login
+POST http://localhost:8000/app/register
 Content-Type: application/json
 
 {
     "email":"manoj060301gmail.com",
-    "password":"manoj@123"
-
+    "username":"manoj060301",
+    "phoneno":"8431189610",
+    "password":"manoj@123",
+    "confirmPassword":"manoj@123"
 
 } 
+
+# POST http://localhost:8000/app/login
+# Content-Type: application/json
+
+# {
+#     "email":"manoj060301gmail.com",
+#     "password":"manoj@123"
+
+
+# } 
