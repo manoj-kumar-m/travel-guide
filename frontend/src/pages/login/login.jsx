@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import classes from './login.module.css'
 import axios from 'axios' 
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
 
@@ -137,7 +138,9 @@ const Login = () => {
                             <span>Show Password</span>
                         </div>
 
-                        <input type="submit" value="Log In" />
+              <NavLink exact to='/home' >       
+                <input className={classes.login} type="submit" value="Log In" />
+              </NavLink>
                         <div className={classes.formFooter}>
                             <span>Don't have an account?</span> <a href="">Sign Up</a> 
                         </div>    

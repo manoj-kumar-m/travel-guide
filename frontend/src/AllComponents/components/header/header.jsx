@@ -1,12 +1,7 @@
 import React from 'react'
 import classes from './header.module.css';
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import { NavLink } from "react-router-dom";
-import {
-  BrowserRouter,
-  Routes,
-  Route,Link,Navigate
-} from "react-router-dom";
 const Header = () => {
 
   return (
