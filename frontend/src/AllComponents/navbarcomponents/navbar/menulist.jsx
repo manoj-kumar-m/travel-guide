@@ -1,14 +1,14 @@
 export const MenuList = [
   {
     title: "Home",
-    url: "/",
+    url: "/home",
   },
   {
-    title: "Featured",
-    url: "/featured",
+    title: "Features",
+    url: "/features",
   },
   {
-    title: "Pricing",
+    title: "Priceplan",
     url: "/pricing",
   },
   {
@@ -21,6 +21,6 @@ export const MenuList = [
   },
   {
     title: "Sign Out",
-    url: "/home",
+    url: "/",
   },
 ];

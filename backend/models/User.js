@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const registerTemplate = new mongoose.Schema({
+const User = new mongoose.Schema({
     email: {
         type: String,
         required:true,
@@ -27,6 +27,9 @@ const registerTemplate = new mongoose.Schema({
         
     // },
 
+   
+    
+
 })
 
-module.exports = mongoose.model('travelguide',registerTemplate)
+module.exports = mongoose.model('User',User)

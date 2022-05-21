@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './header.module.css';
 import ReactDOM from "react-dom/client";
+import { NavLink } from "react-router-dom";
 import {
   BrowserRouter,
   Routes,
@@ -13,7 +14,7 @@ const Header = () => {
          <div className={classes.header}>
               <div className={classes.container}>
                     <a href="/"><img src="./assets/triptok.png" alt="Travel Guide Logo"/></a>
-                    <button className={classes.loginBtn} > Login</button>  
+                    <NavLink exact to='/login' ><button className={classes.loginBtn} > Login</button></NavLink>  
               </div>
               <h1>Travel Across The Globe</h1>
               <p>Happy and Safe Journey</p>

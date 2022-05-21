@@ -1,10 +1,14 @@
-import React from "react";
-function Demo() {
+import React from 'react'
+import Navbar from '../../AllComponents/navbarcomponents/navbar/navbar'
+import GalleryComp from '../../AllComponents/userhomeComponents/galleryComp/galleryComp'
+
+const Gallery = () => {
   return (
-    <div className="page-heading">
-      <h1>Try For Free</h1>
+    <div>
+      <Navbar />
+      <GalleryComp/>  
     </div>
-  );
+  )
 }
 
-export default Demo;
+export default Gallery

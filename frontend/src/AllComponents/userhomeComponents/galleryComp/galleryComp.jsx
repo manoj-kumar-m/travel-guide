@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './galleryComp.module.css'
-const Gallery = () => {
+const GalleryComp = () => {
   return (
       
       <div className={classes.gallery}>
@@ -40,4 +40,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default GalleryComp

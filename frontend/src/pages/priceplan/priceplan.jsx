@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../../AllComponents/navbarcomponents/navbar/navbar'
 import classes from './priceplan.module.css'
 const Priceplan = () => {
   return (
       <>
-    
+        <Navbar/>
         <div className={classes.container}>
               <h2>Choose your plan</h2>
         <div className={classes.priceRow}>

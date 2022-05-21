@@ -171,7 +171,7 @@ const Register = () => {
                     <h2 className={classes.title}>Register </h2>
 
 
-                  <form  className={classes.form} autoComplete="off" onSubmit={(e) => handleSubmit(e)} >
+                  <form  className={classes.form} autoComplete="off" onSubmit={(e) => handleSubmit(e)} method='post' action=''>
  
                         <label for="email">Email</label>
                         <input type="email" value={input.email} name="email" id="email" placeholder="Email" onChange={(e) => handleemail(e)} onBlur={validateInput} />
