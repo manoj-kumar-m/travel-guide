@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
+const { cloudinary } = require('../models/cloudinary');
 
 
 //--------------------------register--------------------------
@@ -60,7 +61,7 @@ router.post('/login', async (req, res) => {
 
                     res.send({
                         message: "Login Successful",user:user
-                    })
+                    }) 
                 } else {
                     res.send({
                         message: "Incorrect Password"
@@ -73,15 +74,40 @@ router.post('/login', async (req, res) => {
             res.send({message: "User Not Registered"})
         }
     })
-                    
-    
-
-
-
-
-
 
 })
+
+// ------------------------------gallery--------------------------------
+
+
+router.get('/images', async (req, res) => {
+    const { resources } = await cloudinary.search
+        .expression('folder:dev_setups')
+        .sort_by('public_id', 'desc')
+        .max_results(30)
+        .execute();
+
+    const publicIds = resources.map((file) => file.public_id);
+    res.send(publicIds);
+});
+
+
+
+router.post('/upload', async (req, res) => {
+    try {
+        const fileStr = req.body.data;
+        const uploadResponse = await cloudinary.uploader.upload(fileStr, {
+            upload_preset: 'dev_setups',
+        });
+        console.log(uploadResponse);
+        res.json({ msg: 'yaya' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ err: 'Something went wrong' });
+    }
+});
+
+
 
 module.exports = router
 
@@ -91,28 +117,3 @@ module.exports = router
 
 
 
-// const {
-    //     email,
-    //     password
-    // } = req.body;
-    // const data = await User.find({email});
-    // console.log(data);
-    // // await bcrypt.compare(password,data.password)
-    // res.send("Hello")
-    // try{
-
-    //     const user = await User.findOne({email:req.body.email})
-    //     !user && res.status(401).json("invalid email or password")
-
-    //     console.log(user)
-
-    //     const originalPassword  = bcrypt.compare(req.body.password,user.password);
-        
-
-    //     originalPassword !== req.body.password && res.status(401).json("invalid email or password")
-
- 
- 
-    // }catch(err){
-    //     res.status(500).json(err)
-    // }

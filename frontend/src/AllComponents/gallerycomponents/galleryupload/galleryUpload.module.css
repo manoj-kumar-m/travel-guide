@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+.container{
+    background-color: rgb(170, 196, 193)  ;
+    height: 100%;
+    padding: 20px 0 100px 0;
+}
+.title {
+    text-align: center;
+    padding: 96px 0 25px 0;
+    border-bottom:1px solid #000000;
+    text-shadow: 2px 1px 2px #a1a1a1;
+}
+
+.upload {
+    padding: 5px 24px;
+    box-shadow: 1px  1px 1px  rgb(59, 55, 12);
+    background-color: rgb(249, 233, 56);
+    color: #000000;
+    transition: 250ms;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  
+}
+
+.upload:hover {
+    border: 1px solid rgb(37, 126, 96);
+    background-color:  #f9f9f9;
+    color: rgb(0, 0, 0);
+}
+textarea{
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 600px;
+    height: 200px;
+    resize: none;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 560;
+    overflow-y: scroll;
+}
+textarea:focus{
+    outline: none;
+}
+.form {
+    margin-bottom: 16px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column  ;
+    padding: 40px 0 ;
+}
+
+.formContainer span{
+    font-weight: 560;
+    font-size: 18px;
+    margin: 20px;
+    text-shadow: 2px 1px 2px #a1a1a1;
+
+}
+.formInput {
+    background-color: rgb(226, 226, 226);
+    margin-bottom: 10px;
+    width: 200px;
+    margin-right: 10px  ;
+    border: 1px solid gray;
+    margin: 0 0 20px 0;
+}
+
+
+.preview img{
+    border: 2px solid black;
+    height: 340px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.description input{
+    
+    padding: 2px 16px;
+}
+.description h3{
+    align-self: flex-start;
+    padding: 2px;
+    margin-top: 10px;
+    text-shadow: 2px 1px 2px #a1a1a1;
+
+}
+.reset{
+    padding: 5px 24px;
+    box-shadow: 1px  1px 1px  rgb(59, 55, 12);
+    background-color: rgb(251, 20, 20);
+    color: #ffffff;
+    transition: 250ms;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 28px 5px 0 400px;
+    border-radius: 5px;
+}
+.reset:hover{
+    border: 1px solid rgb(37, 126, 96);
+    background-color:  #f9f9f9;
+    color: rgb(0, 0, 0);
+}

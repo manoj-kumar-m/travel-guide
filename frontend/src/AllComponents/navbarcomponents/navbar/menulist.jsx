@@ -15,10 +15,7 @@ export const MenuList = [
     title: "Tours",
     url: "/tours",
   },
-  {
-    title: "Gallery",
-    url: "/gallery",
-  },
+
   {
     title: "Sign Out",
     url: "/",

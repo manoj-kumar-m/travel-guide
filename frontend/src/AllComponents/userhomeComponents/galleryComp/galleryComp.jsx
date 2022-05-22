@@ -6,7 +6,7 @@ const GalleryComp = () => {
       <div className={classes.gallery}>
           <div className={classes.galleryHeader}>
             <h1>Travelling Gallery</h1>
-            <a href="/">see all {`>`} </a>
+            <a href="/tours">see all {`>`} </a>
           </div>
             <div className={classes.container}>
                 <div className={classes.row}>

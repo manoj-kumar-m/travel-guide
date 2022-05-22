@@ -1,0 +1,26 @@
+
+
+* {
+    box-sizing: border-box;
+
+}
+
+
+.alert {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    position: fixed;
+    top: 2rem;
+    right: 0rem;
+    min-width: 200px;
+}
+
+.alertsuccess {
+    background-color: #d4edda;
+    color:#155724;
+}
+
+.alertdanger {
+    background-color:  #f5c6cb;
+    color: #721c24;
+}
