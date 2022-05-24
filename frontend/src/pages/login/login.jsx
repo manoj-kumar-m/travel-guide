@@ -46,7 +46,7 @@ const Login = ({setuser}) => {
       
     }
     
-    axios.post('http://localhost:8000/app/login', logged)
+    axios.post('https://travel-guide-mern.herokuapp.com/app/login', logged)
       .then(res => {
         alert(res.data.message)
         setuser(res.data.user)

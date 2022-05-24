@@ -76,7 +76,7 @@ const navigate = useNavigate()
 
      
         password === confirmPassword &&
-        axios.post('http://localhost:8000/app/register', registered)
+        axios.post('https://travel-guide-mern.herokuapp.com/app/register', registered)
           .then(res => {
             alert(res.data.message)
             // setreguser(res.data.user)
