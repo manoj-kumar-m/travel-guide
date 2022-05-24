@@ -1,6 +1,6 @@
 import classes from './choose.module.css'
 import data from './data.json'
-import React,{useEffect,useState} from 'react'
+import React,{useState} from 'react'
 
 const Choose = () => {
     const state = {
@@ -11,13 +11,13 @@ const Choose = () => {
     }
     
     const [areaid, setAreaid] = useState('');
-    // const [Area, setArea]= useState([]);
+
     const [stateid, setStateid] = useState('');
-    // const [State, setState]= useState([]);
+   
     const [districtid, setDistrictid]=useState('');
-    // const [district, setDistrict]= useState([]);
-    const [cityid, setCityid]=useState('');
-    // const [city, setCity]= useState([]);
+    
+    // const [cityid, setCityid]=useState('');
+   
 
     
    
@@ -138,7 +138,7 @@ const Choose = () => {
                                 </datalist>
                             </div>
                             
-                        }
+                    }
         {/*----------------------------------------------------------------------------------------------------------------  */}
                        
                             

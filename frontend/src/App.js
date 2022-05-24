@@ -1,6 +1,6 @@
 import './App.css';
 
-// import Home from './pages/home/home';
+
 import Loader from './pages/loading/loader';
 import React from 'react'
 import { useState, useEffect } from 'react'
@@ -17,14 +17,14 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import Priceplan from './pages/priceplan/priceplan';
 import GalleryUpload from './AllComponents/gallerycomponents/galleryupload/galleryUpload';
-import GalleryNav from './AllComponents/gallerycomponents/gallerynav/gallerynav';
+// import GalleryNav from './AllComponents/gallerycomponents/gallerynav/gallerynav';
 import Gallery from './AllComponents/gallerycomponents/gallery/gallery';
 
 
 const App = () => {
 
   const [user, setuser] = useState({})
-  const [reguser, setreguser] = useState({})
+  // const [reguser, setreguser] = useState({})
 
   const [loading, setLoading] = useState(false)
   
@@ -48,7 +48,8 @@ const App = () => {
             (user && user._id) ?    <Userhome /> : <Login/>
             
           } />
-          <Route exact path="/register" element= {<Register setreguser={ setreguser}/>} />
+          <Route exact path="/register" element={<Register />} />
+          {/* setreguser={ setreguser} */}
           <Route exact path="/login" element={<Login setuser={ setuser} />} />
           <Route path="/features"  element={<Features/>} />
           

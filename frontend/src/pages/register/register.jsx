@@ -3,7 +3,7 @@ import classes from './register.module.css'
 import axios from 'axios'
 import { NavLink, useNavigate } from 'react-router-dom';
 
-const Register = ({setreguser}) => {
+const Register = () => {
 
 const navigate = useNavigate()
 
@@ -64,32 +64,33 @@ const navigate = useNavigate()
     }
     const handleSubmit = (event) => {
       event.preventDefault()
+    
+    {
+        const registered = {
+          email: email,
+          username: username,
+          phoneno: phoneno,
+          password: password ,
+          confirmPassword: confirmPassword,
+        }
 
-      const registered = {
-        email: email,
-        username: username,
-        phoneno: phoneno,
-        password: password ,
-        confirmPassword: confirmPassword,
-      }
-
-      {
+     
         password === confirmPassword &&
         axios.post('http://localhost:8000/app/register', registered)
           .then(res => {
             alert(res.data.message)
-            setreguser(res.data.user)
+            // setreguser(res.data.user)
             navigate("/login")
           })
-      }
+    }
 
-          setemail=''
-          setusername= ''
-          setphoneno=''
-          setpassword='' 
-          setconfirmPassword = ''
-
-        // navigate("/login")
+          // setemail=''
+          // setusername= ''
+          // setphoneno=''
+          // setpassword='' 
+          // setconfirmPassword = ''
+ 
+          
     }
   
 

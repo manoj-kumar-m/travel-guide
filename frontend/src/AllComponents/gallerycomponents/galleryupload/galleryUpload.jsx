@@ -1,25 +1,28 @@
 import React, { useState } from 'react'
-// import Navbar from '../../navbarcomponents/navbar/navbar';
 import GalleryNav from '../gallerynav/gallerynav';
-import Alert from '../gallleryalert/galleryAlert';
+// import Alert from '../gallleryalert/galleryAlert';
 import classes from './galleryUpload.module.css'
+import axios from 'axios'
+// import {Image} from 'cloudinary-react'
 const GalleryUpload = () => {
 
-
-
-    const [fileInputState, setFileInputState] = useState('');
+    // const [fileInputState, setFileInputState] = useState('');
+    // const [successMsg, setSuccessMsg] = useState('');
+    // const [errMsg, setErrMsg] = useState('');
+    
     const [previewSource, setPreviewSource] = useState('');
-    const [selectedFile, setSelectedFile] = useState();
-    const [successMsg, setSuccessMsg] = useState('');
-    const [errMsg, setErrMsg] = useState('');
-     
-
+    const [selectedFile, setSelectedFile] = useState('');
 
     const handleFileInputChange = (e) => {
-        const file = e.target.files[0];
-        previewFile(file);
-        setSelectedFile(file);
-        setFileInputState(e.target.value);
+        // console.log(e.target.files)
+        // const file = e.target.files[0];
+        // previewFile(file);
+        // setSelectedFile(file);
+        // setFileInputState(e.target.value);
+
+        const f = e.target.files[0];
+        setSelectedFile(f);
+        previewFile(selectedFile);
     };
 
 
@@ -29,45 +32,63 @@ const GalleryUpload = () => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = () => {
-            setPreviewSource(reader.result);
+            return setPreviewSource(reader.result);
         };
+        
+
+  
     };
 
-    const handleSubmitFile = (e) => {
+// -----------------------uploading Image Function-----------------
+    
+    // const uploadImage = async (base64EncodedImage) => {
+    //     try {
+    //         const img = {
+    //             data: base64EncodedImage
+    //         }
+    //         axios.post('http://localhost:8000/app/upload', img)
+    //         // await fetch('/upload', {
+    //         //     method: 'POST',
+    //         //     body: JSON.stringify({ data: base64EncodedImage }),
+    //         //     headers: { 'Content-Type': 'application/json' },
+    //         // });
+    //         setFileInputState('');
+    //         setPreviewSource('');
+    //         setSuccessMsg('Image uploaded successfully');
+    //     } catch (err) {
+    //         console.error(err);
+    //         setErrMsg('Something went wrong!');
+    //     }
+    // };
+
+    
+// -------------------handleUpload----------------------------
+
+    const handleUpload = (e) => {
         e.preventDefault();
 
         if (!selectedFile) return;
 
-        const reader = new FileReader();
-        reader.readAsDataURL(selectedFile);
+        // const reader = new FileReader();
+        // reader.readAsDataURL(selectedFile);
 
-        reader.onloadend = () => {
-            uploadImage(reader.result);
-        };
+        // reader.onloadend = () => {
+        //     uploadImage(reader.result);
+        // };
 
-        reader.onerror = () => {
-            console.error('AHHHHHHHH!!');
-            setErrMsg('something went wrong!');
-        };
+        // reader.onerror = () => {
+        //     console.error('Oh Shit!');
+        //     setErrMsg('something went wrong!');
+        // };
+        const formData = new FormData()
         
+        formData.append('file',  selectedFile)
+        formData.append('upload_preset', 'travelguide')
+         
+        axios.post("https://api.cloudinary.com/v1_1/travel-guide/image/upload/v1570979139/travelguide", formData)
+            .then(res => console.log(res))
+       
 
-    };
-// -----------------------uploading Image -----------------
-    
-    const uploadImage = async (base64EncodedImage) => {
-        try {
-            await fetch('/upload', {
-                method: 'POST',
-                body: JSON.stringify({ data: base64EncodedImage }),
-                headers: { 'Content-Type': 'application/json' },
-            });
-            setFileInputState('');
-            setPreviewSource('');
-            setSuccessMsg('Image uploaded successfully');
-        } catch (err) {
-            console.error(err);
-            setErrMsg('Something went wrong!');
-        }
     };
 
 
@@ -82,11 +103,11 @@ const GalleryUpload = () => {
             
             <div className={classes.container}>
                 <h1 className={classes.title}>Upload Your Moments</h1>
-                    <Alert msg={errMsg} type="danger" />
-                    <Alert msg={successMsg} type="success" />
+                    {/* <Alert msg={errMsg} type="danger" />
+                    <Alert msg={successMsg} type="success" /> */}
                     
                     
-                    <form onSubmit={handleSubmitFile} className={classes.form}>
+                    <form onSubmit={handleUpload} className={classes.form}>
                         
                         <div className={classes.formContainer}>
                        <span>Upload Your Captures :  </span> <input
@@ -94,7 +115,7 @@ const GalleryUpload = () => {
                                 type="file"
                                 name="image"
                                 onChange={handleFileInputChange}
-                                value={fileInputState}
+                                // value={fileInputState}
                                 className={classes.formInput}
                                 multiple
                             />
@@ -103,8 +124,9 @@ const GalleryUpload = () => {
 
                         {previewSource && (
                          <div className={classes.preview}>
-                            
-                                <h3>Preview : </h3><br />
+
+                            <h3>Preview : </h3><br />
+                            {/* <Image cloudName = "travel-guide" publicId/> */}
                                 <img
                                     src={previewSource}
                                     alt="chosen"
