@@ -105,13 +105,8 @@ const Choose = () => {
                                         <label className={classes.formLabel}>District</label>
                                         <select className={classes.formSelect} name="state" onChange={(e) => handledistrict(e)}>
                                             <option value="">----- Select District -----</option>
-                                            {
-                                            stateid ? data.states.filter((ele) => ele.state === stateid)[0].districts.map(i =>
-                                                
-                                                <option key={i} value={i}>{i}</option>
-                                            ) : ''
-                                                
-                                            }
+                                            {stateid ? data.states.filter((ele) => ele.state === stateid)[0].districts.map( i => <option key={i} value={i}>{i}</option> ) : ''   }
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -141,6 +136,7 @@ const Choose = () => {
                     }
         {/*----------------------------------------------------------------------------------------------------------------  */}
                        
+                        {(stateid || districtid) &&
                             
                             <div className={classes.col3}>
                                 <label className={classes.formLabel}>Number of Days : </label>
@@ -154,7 +150,7 @@ const Choose = () => {
                                 </select>
                             </div>
                             
-                    
+                        }
 
         {/*----------------------------------------------------------------------------------------------------------------  */}
                         
