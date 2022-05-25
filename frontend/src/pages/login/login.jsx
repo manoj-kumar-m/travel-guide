@@ -119,7 +119,7 @@ const Login = ({setuser}) => {
             <div className={classes.formContainer}>
               <div className={classes.formBody}>
 
-                    <h2 className={classes.title}>Log in </h2>
+                    <h2 className={classes.title}>Login </h2>
 
 
                   <form action="" className={classes.form} autoComplete="off" onSubmit={(e)=> handleSubmit(e)} >
@@ -138,7 +138,7 @@ const Login = ({setuser}) => {
                         </div>
 
                     
-                        <input className={classes.login} type="submit" value="Log In" />
+                        <input className={classes.login} type="submit" value="Login" />
               
                         <div className={classes.formFooter}>
                             <span>Don't have an account?</span> <NavLink exact to='/register' >  Sign Up</NavLink> 
